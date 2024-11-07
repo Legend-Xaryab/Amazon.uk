@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="intro.css">
+    <title>Amazon Security</title>
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #232f3e;
+            padding: 20px;
+        }
+
+        header .logo a {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .main {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .amazon-logo {
+            margin: 20px 0;
+        }
+
+        .amazon-logo img {
+            width: 150px; /* Adjust size as needed */
+        }
+
+        .detail h1 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        .detail h3 {
+            color: #007185;
+            margin: 10px 0;
+        }
+
+        .detail p {
+            margin: 20px 0;
+        }
+
+        .btn button {
+            background-color: #ffa41c;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn button:hover {
+            background-color: #ff8c00;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="container">
+        <div class="page-header">
+            <div class="logo">
+                <a href="#">Amazon Security</a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="main">
+            <div class="amazon-logo">
+                <a href="https://www.amazon.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+
+                </a>
+            </div>
+            <div class="detail">
+                <h1>Welcome to Amazon Security</h1>
+                <h3>Your account safety is our priority</h3>
+                <p>Please click the Amazon logo above to proceed to the official Amazon security page.</p>
+                <div class="btn">
+                    <button>Contact Support</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const darkbtn = document.getElementById('darkbtn');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkbtn.checked = true;
+        }
+
+        darkbtn.addEventListener('change', () => {
+            if (darkbtn.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+Show quoted text
