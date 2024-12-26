@@ -1,138 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="intro.css">
-    <title>Amazon Security</title>
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <title>Clickable Amazon Logo</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
         }
-
-        header {
-            background-color: #232f3e;
-            padding: 20px;
-        }
-
-        header .logo a {
-            color: #fff;
-            font-size: 24px;
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 1200px; /* Increased max-width for larger screens */
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .main {
-            background-color: #fff;
-            padding: 40px; /* Increased padding for better spacing */
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .amazon-logo {
-            margin: 20px 0;
-        }
-
-        .amazon-logo img {
-            width: 200px; /* Adjusted size for better visibility */
-        }
-
-        .detail h1 {
-            font-size: 32px; /* Increased font size for better readability */
-            margin: 10px 0;
-        }
-
-        .detail h3 {
-            color: #007185;
-            margin: 10px 0;
-            font-size: 20px; /* Increased font size */
-        }
-
-        .detail p {
-            margin: 20px 0;
-            font-size: 18px; /* Increased font size */
-        }
-
-        .btn button {
-            background-color: #ffa41c;
-            border: none;
-            padding: 15px 30px; /* Increased padding for larger button */
-            border-radius: 5px;
+        #amazon-logo {
             cursor: pointer;
-            font-size: 18px; /* Increased font size */
-            transition: background-color 0.3s; /* Smooth transition */
-        }
-
-        .btn button:hover {
-            background-color: #ff8c00;
-        }
-
-        /* Media Queries for Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px; /* Reduced padding for smaller screens */
-            }
-
-            .main {
-                padding: 20px; /* Reduced padding for smaller screens */
-            }
-
-            .amazon-logo img {
-                width: 150px; /* Adjusted size for smaller screens */
-            }
-
-            .detail h1 {
-                font-size: 24px; /* Adjusted font size for smaller screens */
-            }
-
-            .detail h3 {
-                font-size: 18px; /* Adjusted font size for smaller screens */
-            }
-
-            .detail p {
-                font-size: 16px; /* Adjusted font size for smaller screens */
-            }
-
-            .btn button {
-                padding: 10px 20px; /* Reduced padding for smaller screens */
-                font-size: 16px; /* Adjusted font size for smaller screens */
-            }
+            width: 200px; /* Adjust the size as needed */
         }
     </style>
 </head>
-
 <body>
-    <header class="container">
-        <div class="page-header">
-            <div class="logo">
-                <a href="#">Amazon Security</a>
-            </div>
-        </div>
-    </header>
 
-    <section class="container">
-        <div class="main">
-            <div class="amazon-logo">
-                <a href="https://anydesk.com/en/downloads/thank-you?dv=win_exe" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
-                </a>
-            </div>
-            <div class="detail">
-                <h1>Welcome to Amazon Security</h1>
-                <h3>Your Account Safety Is Our Priority. Click The Amazon Logo To Secure Your Connection</h3>
-                <p>Please click the Amazon logo above to proceed to the official Amazon security page.</p>
-                <div class="btn
+    <img id="amazon-logo" src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+
+    <script>
+        // URL to redirect to when the logo is clicked
+        const redirectUrl = "https://www.amazon.com";
+
+        // Add click event listener to the logo
+        document.getElementById('amazon-logo').addEventListener('click', function() {
+            window.location.href = redirectUrl;
+        });
+    </script>
+
+</body>
+</html>
